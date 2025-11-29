@@ -102,6 +102,11 @@ sudo systemctl reload nginx
 sudo certbot --nginx -d example.com -d www.example.com
 ```
 
+Перезагружаем веб сервер nginx
+```bash
+sudo systemctl reload nginx
+```
+
 Certbot автоматически:
 - Получит сертификат от Let's Encrypt
 - Настроит редирект с HTTP на HTTPS
