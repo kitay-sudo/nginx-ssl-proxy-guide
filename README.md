@@ -83,7 +83,13 @@ server {
 Активируем конфигурацию:
 
 ```bash
+# Удаляем дефолтный конфиг (чтобы избежать конфликтов)
+sudo rm /etc/nginx/sites-enabled/default
+
+# Активируем наш конфиг
 sudo ln -s /etc/nginx/sites-available/myapp /etc/nginx/sites-enabled/
+
+# Проверяем и применяем
 sudo nginx -t
 sudo systemctl reload nginx
 ```
